@@ -46,7 +46,7 @@ function renderPepperonni() {
 function renderMushrooms() {
   // Iteration 1: set the visibility of `<section class="mushroom">`
   document.querySelectorAll('.mushroom').forEach(function(mush) {
-    if (state.mushroom) {
+    if (state.mushrooms) {
       mush.style.visibility = "visible";
     }
     else {
@@ -94,13 +94,43 @@ function renderGlutenFreeCrust() {
 
 function renderButtons() {
   // Iteration 3: add/remove the class "active" of each `<button class="btn">`
-  document.querySelectorAll('.btn').forEach((button) =>{
-    button.addEventListener("click", function(){
-      if
-    })
+  // document.querySelectorAll('.btn').forEach((button) =>{
+  //   button.addEventListener("click", function(){
+  //     if (button.classList.contains("active")){
+  //       button.classList.remove("active");
+  //       renderEverything();
+  //     }
+  //     else{
+  //       button.classList.add("active");
+  //       renderEverything();
+  //     }
+  //   })
 
-  })
+  // })
+  
+
+if(state.mushrooms)
+document.querySelector(".btn-mushrooms").classList.add('active')
+else
+document.querySelector(".btn-mushrooms").classList.remove('active')
+
+if(state.greenPeppers)
+document.querySelector(".btn-green-peppers").classList.add('active')
+else
+document.querySelector(".btn-green-peppers").classList.remove('active')
+
+if(state.pepperonni)
+document.querySelector(".btn-pepperonni").classList.add('active')
+else
+document.querySelector(".btn-pepperonni").classList.remove('active')
+
+if(state.glutenFreeCrust)
+document.querySelector(".btn-crust").classList.add('active')
+else
+document.querySelector(".btn-crust").classList.remove('active')
+
 }
+
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
@@ -117,7 +147,7 @@ document.querySelector('.btn.btn-pepperonni').onclick = function() {
 
 // Iteration 1: Add click event listener on `<button class="btn btn-mushrooms">`
 document.querySelector('.btn.btn-mushrooms').onclick = function() {
-  state.mushroom = !state.mushroom
+  state.mushrooms = !state.mushrooms
   renderEverything();
 }
 
