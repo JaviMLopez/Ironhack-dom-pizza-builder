@@ -124,10 +124,15 @@ document.querySelector(".btn-pepperonni").classList.add('active')
 else
 document.querySelector(".btn-pepperonni").classList.remove('active')
 
-if(state.glutenFreeCrust)
+if(!state.glutenFreeCrust)
 document.querySelector(".btn-crust").classList.add('active')
 else
 document.querySelector(".btn-crust").classList.remove('active')
+
+if(!state.whiteSauce)
+document.querySelector(".btn-sauce").classList.add('active')
+else
+document.querySelector(".btn-sauce").classList.remove('active')
 
 }
 
