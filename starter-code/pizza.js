@@ -139,6 +139,7 @@ document.querySelector(".btn-sauce").classList.remove('active')
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
+  
 }
 
 
